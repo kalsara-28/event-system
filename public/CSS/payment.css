@@ -1,0 +1,43 @@
+body {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Pictures/login1.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+    margin: 0;
+    
+    
+}
+nav {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.text{
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.card-body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.get-now-btn {
+    background-color: #e08b8b;
+    color: white;
+    border: none;
+    margin: 15px auto 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block; 
+    font-size: 20px;
+}
+.foot{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 30px;
+}

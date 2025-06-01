@@ -1,0 +1,35 @@
+body {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../Pictures/engagement2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(244, 243, 241);
+}
+.top-right {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 999;
+}
+
+.btn-login {
+    background-color: #ffbde6; 
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.btn-login:hover {
+    background-color: #a71d2a;
+    color: white;
+}
+.overlay p{
+     font-size: 20px;
+}
+.btn-light{
+    font-size: 20px;
+    background-color: rgb(243, 149, 194);
+    color: #fcf8f8;
+}
+        
+
+

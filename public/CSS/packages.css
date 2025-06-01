@@ -1,0 +1,72 @@
+nav {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.package{  
+    padding:20px;
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+  
+  .pack{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+ }
+ .package-card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+  }
+  .package-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .badge-custom {
+    background-color: rgb(247, 28, 229);
+    color: purple;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 30px;
+  }
+  .discount-text {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .text-muted{
+    font-size: 20px;
+  }
+  .booking-text {
+    color: purple;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  .get-now-btn {
+    background-color: #e08b8b;
+    color: white;
+    border: none;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 10px 150px;
+    border-radius: 5px;
+  }
+   .row > .col-md-4 {
+  margin-bottom: 24px; 
+}
+.foot{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

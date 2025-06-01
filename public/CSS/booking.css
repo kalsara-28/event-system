@@ -1,0 +1,27 @@
+body {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Pictures/image3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+    margin: 0;
+    
+    
+}
+.text{
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.get-now-btn {
+    background-color: #e08b8b;
+    color: white;
+    border: none;
+    margin: 15px auto 0 auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block; 
+
+    
+
+}

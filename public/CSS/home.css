@@ -1,0 +1,163 @@
+body {
+    background-image: url('../Pictures/home4.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.overlay {
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 0, 128, 0.6); 
+      color: white;
+      padding: 30px 50px;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 10px;
+}
+.display-4{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.lead1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align:center;
+    font-size: 20px;
+}
+.serv{
+    padding: 950px 20px 50px 20px;
+}
+
+
+.our{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;            
+    text-align: center; 
+}
+.lead2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;            
+    text-align: center; 
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+
+.card-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+}
+.get-now-btn {
+    background-color: #d55a97;
+    color: white;
+    width: 150px;
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    height: 150%;
+    flex-grow: 1;
+    text-align: center;
+    
+  }
+  .card{
+    display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  
+  }
+.row > .col-md-4 {
+  margin-bottom: 24px; 
+}
+
+  .package{  
+    padding:20px;
+    min-height: 100vh;
+}
+  
+  .pack{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+ }
+ .card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    align-items: center;
+  }
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    height: 150%;
+    flex-grow: 1;
+    align-items: center;
+    
+  }
+  .badge-custom {
+    background-color: rgb(247, 28, 229);
+    color: purple;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .discount-text {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .booking-text {
+    color: purple;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  .get-now-btn {
+    background-color: #fe5dc0;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+  }

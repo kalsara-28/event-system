@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Pictures/login4.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ← Darken level here */
+    z-index: 0;
+}
