@@ -1,27 +1,61 @@
 body {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Pictures/image3.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Pictures/wedi7.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150vh;
+    height: 100vh;
     margin: 0;
-    
+
     
 }
-.text{
-    text-align: center;
+nav {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
+    width: 100%;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
-.get-now-btn {
-    background-color: #e08b8b;
-    color: white;
+form {
+    max-width: 600px;
+    min-height: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 25px;
     border: none;
-    margin: 15px auto 0 auto;
-    padding: 10px 20px;
     border-radius: 5px;
-    display: block; 
+    background-color: #6f42c1;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
-    
+button:hover {
+    background-color: #5a379d;
+}
 
+h3 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    color: #343a40;
+}
+.foot{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
