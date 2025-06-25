@@ -23,12 +23,6 @@
                     <a class="nav-link active" href="{{ route('about_us') }}">About Us</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('service') }}">Our Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('packages') }}">Packages</a>
-                    </li>
-                <li class="nav-item">
                     <a class="nav-link active" href="{{ route('gallery') }}">Gallery</a>
                 </li>
                 <li class="nav-item">
@@ -39,69 +33,49 @@
     </div>
   </nav>
   </div>
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card shadow-lg">
-                <div class="card-header bg-dark text-white text-center">
-                    <h4 class="text">Make a Payment</h4>
+ <div class="payment-form">
+        <h2>Payment</h2>
+
+        @if(session('success'))
+            <div class="alert">{{ session('success') }}</div>
+        @endif
+
+        <div class="payment-options">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Pay">
+            <img src="/Pictures/googlepay.jpg" alt="Google Pay">
+        </div>
+
+        <div class="separator"><span>or pay using credit card</span></div>
+
+        <form action="{{ route('payment') }}" method="POST">
+            @csrf
+            <label>Card holder full name</label>
+            <input type="text" name="full_name" placeholder="Enter your full name" required>
+            <label> Payment for:</label>
+            <input type="text" name="Payment_for" placeholder="Payment for" required>
+            <label>Amount: Rs.</label>
+            <input type="text" name="Amount" placeholder="Rs." required>
+
+            <label>Card Number</label>
+            <input type="text" name="card_number" placeholder="0000 0000 0000 0000" required>
+
+            <div class="row">
+                <div style="flex:1;">
+                    <label>Expiry Date</label>
+                    <input type="text" name="expiry" placeholder="01/23" required>
                 </div>
-                <div class="card-body">
-                    @if(session('success'))
-                        <div class="alert alert-success">{{ session('success') }}</div>
-                    @endif
-
-                    <form method="POST" action="{{ route('payment.process') }}">
-                        @csrf
-
-                        <div class="mb-3">
-                            <label class="form-label">Full Name</label>
-                            <input type="text" name="name" class="form-control" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Email Address</label>
-                            <input type="email" name="email" class="form-control" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Service</label>
-                            <select name="service" class="form-select" required>
-                                <option value="">-- Select Service --</option>
-                                <option value="Hair Cutting">Wedding </option>
-                                <option value="Facial">Birthday </option>
-                                <option value="Makeup">Engagement parties</option>
-                                <option value="Waxing">Proposal Planning </option>
-                                <option value="Waxing">Gender Revel Parties </option>
-                                <option value="Waxing">Bride to be parties </option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Card Number</label>
-                            <input type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" required>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Expiry Date</label>
-                                <input type="text" class="form-control" placeholder="MM/YY" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">CVV</label>
-                                <input type="text" class="form-control" placeholder="123" required>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="get-now-btn">Pay Now</button>
-                    </form>
+                <div style="flex:1;">
+                    <label>CVV</label>
+                    <input type="text" name="cvv" placeholder="CVV" required>
                 </div>
             </div>
-        </div>
+
+            <button type="submit">Pay Now</button>
+        </form>
     </div>
-</div>
+
 <footer class="bg-dark text-white pt-4 pb-2 mt-5">
-    <div class="foot">
     <div class="container text-center text-md-start">
         <div class="row">
             <!-- About -->
@@ -115,8 +89,10 @@
                 <h5 class="text-uppercase">Quick Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a></li>
-                    <li><a href="{{ route('about_us') }}" class="text-white text-decoration-none">About Us</a></li>
-                    <li><a href="{{ route('gallery') }}" class="text-white text-decoration-none">Gallery</a></li>
+                    <li><a href="{{ route('gallery') }}" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="{{ route('service') }}" class="text-white text-decoration-none">Our Service</a></li>
+                    <li><a href="{{ route('packages') }}" class="text-white text-decoration-none">Packages</a></li>
+                    <li><a href="{{ route('about_us') }}" class="text-white text-decoration-none">Gallery</a></li>
                     <li><a href="{{ route('contact') }}" class="text-white text-decoration-none">Contact</a></li>
                 </ul>
             </div>
@@ -134,7 +110,6 @@
 
     <div class="text-center mt-3">
         <small>&copy; {{ date('Y') }} Evenra. All rights reserved.</small>
-    </div>
     </div>
 </footer>
 @endsection
