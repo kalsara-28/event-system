@@ -1,12 +1,17 @@
 body {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Pictures/deco2.jpg');
+    background-image:url('../Pictures/deco1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150vh;
+    height: 100%;
     margin: 0;
+    padding: 0;
     
     
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3); /* reduce from 0.5 or 0.7 */
 }
 nav {
     background-size: cover;
@@ -18,100 +23,63 @@ nav {
     font-size: 20px;
 }
 .event-container {
+        min-height: 100vh;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 40px;
-        gap: 30px;
+        flex-direction: column;
         font-family: 'Times New Roman', Times, serif;
-        
+    }
+    .content-wrap {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
     }
     .card{
          padding: 25px;
          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
           border-radius: 12px;
+          align-items: center;
+          
     }
-    .event-details, .booking-form {
-        flex: 1;
-        min-width: 300px;
+    .event-image {
+        height: 100%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 15px  15px;
     }
-    .event-details h2{
+    .event-container h2{
         font-size: 40px;
         font-weight: bold;
         text-align: center;
-        background-color: #fd1ea4;
+       
     }
-    .event-details p{
+    .event-container p{
         font-size: 20px;
         text-align: center;
     }
-    .event-details img {
-        max-width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        margin-bottom: 20px;
-    }
-    .event-details ul {
+    
+    .event-container ul {
        
         padding-left: 20px;
         font-size: 20px;
+        margin-bottom: 10px;
+        text-align: left;
         
     }
     .heart-list {
     list-style: none;
     padding-left: 0;
+
 }
 
 .heart-list li::before {
     content: "❤️ "; 
-    margin-right: 8px;
-}
-    .booking-form {
-        background-color: #f9f9f9;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        
-    }
-    .booking-form h3{
-        font-size: 30px;
-        font-weight: bold;
-    }
-    .booking-form input,
-    .booking-form textarea {
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 10px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        font-size: 18px;
-    }
-    .booking-form button {
-        background-color: #fb1aa1;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 20px;
-        
-    }
-    .booking-form button[type="reset"] {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    background-color: #ff66bf;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
    
-}
-
-.booking-form button[type="reset"]:hover {
-    background-color: #fc4dbf;
-}
-
-    .foot{
+    
+}  
+.foot{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+   padding: 50px 0; 
+   flex-shrink: 0;
+   margin-top: 50px;
 }
