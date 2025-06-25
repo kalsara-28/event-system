@@ -10,7 +10,18 @@ nav {
 .package{  
     padding:20px;
     min-height: 100vh;
-    font-family: 'Times New Roman', Times, serif;
+}
+.Direct{
+  position: absolute;
+    right: 0;
+    top: 80px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+}
+h3{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
 }
   
   .pack{
@@ -19,16 +30,27 @@ nav {
   font-family: 'Times New Roman', Times, serif;
   color: black;
  }
- .package-card {
+ .card {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: none;
     border-radius: 10px;
     overflow: hidden;
     margin: 10px;
+    align-items: center;
   }
-  .package-card img {
+  .card img {
     height: 200px;
     object-fit: cover;
+  }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    height: 150%;
+    flex-grow: 1;
+    align-items: center;
+    
   }
   .badge-custom {
     background-color: rgb(247, 28, 229);
@@ -39,14 +61,11 @@ nav {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 20px;
   }
   .discount-text {
     font-size: 30px;
     font-weight: bold;
-  }
-  .text-muted{
-    font-size: 20px;
   }
   .booking-text {
     color: purple;
@@ -55,17 +74,14 @@ nav {
     margin-top: 15px;
   }
   .get-now-btn {
-    background-color: #e08b8b;
+    background-color: #fe5dc0;
     color: white;
     border: none;
-    font-size: 20px;
     margin-top: 15px;
-    padding: 10px 150px;
+    padding: 10px 20px;
     border-radius: 5px;
+    
   }
-   .row > .col-md-4 {
-  margin-bottom: 24px; 
-}
 .foot{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
