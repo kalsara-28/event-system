@@ -21,12 +21,6 @@
                     <a class="nav-link active" href="{{ route('about_us') }}">About Us</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('service') }}">Our Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('packages') }}">Packages</a>
-                    </li>
-                <li class="nav-item">
                     <a class="nav-link active" href="{{ route('gallery') }}">Gallery</a>
                 </li>
                 <li class="nav-item">
@@ -38,7 +32,9 @@
   </nav>
   </div>
   <div class="package">
+    <button class="Direct " href="{{ route('booking.show') }}">Direct Booking</button>
         <h1 class="pack">Our Event Packages</h1>
+        <h3>Choosing your Package</h3>
     <div class="row justify-content-center">
       <div class="row g-4">   
           <div class="col-md-4">
@@ -49,7 +45,7 @@
                         <div class="discount-text">15% Discount</div>
                         <p class="text-muted">Our Half Package is designed for clients who need support at any stage of their special event planning. Whether it's choosing the perfect venue, finalizing the theme, coordinating vendors, or last-minute arrangements, Evenra steps in to make your dream celebration come true effortlessly and elegantly.</p>
                         <div class="booking-text">Booking Now Open</div>
-                        <button class="get-now-btn">Get Now</button>
+                        <button class="get-now-btn" href="{{ route('booking.show', ['type' => $type]) }}">Get Now</button>
                       </div>
                 </div>
           </div>
@@ -63,7 +59,7 @@
                         <div class="discount-text">20% Discount</div>
                         <p class="text-muted">With our Full Package, we take care of your entire event from start to finish. From the very first planning meeting to the final sparkle of your magical day, Evenra ensures every moment is meticulously curated and beautifully executed.</p>
                         <div class="booking-text">Booking Now Open</div>
-                        <button class="get-now-btn">Get Now</button>
+                        <button class="get-now-btn" href="{{ route('booking.show', ['type' => $type]) }}">Get Now</button>
                       </div>
                     </div>
                   </div>
@@ -77,7 +73,7 @@
                     <div class="discount-text">10% Discount</div>
                     <p class="text-muted">Our Day Package is perfect for those who have already planned most details but need professional support on the event day. Evenra will manage coordination, timing, and troubleshooting so you can relax and enjoy every moment without worry.</p>
                     <div class="booking-text">Booking Now Open</div>
-                    <button class="get-now-btn">Get Now</button>
+                    <button class="get-now-btn" href="{{ route('booking.show', ['type' => $type]) }}">Get Now</button>
                   </div>
                 </div>
               </div>
