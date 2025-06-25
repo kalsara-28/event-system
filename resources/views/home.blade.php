@@ -22,12 +22,6 @@
                     <a class="nav-link active" href="{{ route('about_us') }}">About Us</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('service') }}">Our Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('packages') }}">Packages</a>
-                    </li>
-                <li class="nav-item">
                     <a class="nav-link active" href="{{ route('gallery') }}">Gallery</a>
                 </li>
                 <li class="nav-item">
@@ -60,7 +54,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Weddings</h5>
                     <p class="card-text">From romantic setups to themed celebrations, we make your dream wedding a reality.</p>
-                    <a href="{{ route('service.details', ['type' => 'wedding']) }}">
+                    <a href="{{ route('event.details',$event->id) }}">
                         <button class="get-now-btn">View</button>
                     </a>
                 </div>
@@ -72,7 +66,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Birthday Parties</h5>
                     <p class="card-text">Fun, colorful, and unforgettable birthday events for all ages!</p>
-                    <a href="{{ route('service.details', ['type' => 'birthday']) }}">
+                    <a href="{{ route('event.details',$event->id) }}">
                         <button class="get-now-btn">View</button>
                     </a>
                 </div>
@@ -84,7 +78,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Engagement parties</h5>
                     <p class="card-text">Professional setups, brand styling, and complete coordination for your corporate needs.</p>
-                    <a href="{{ route('service.details', ['type' => 'engagement']) }}">
+                    <a href="{{ route('event.details',$event->id) }}">
                         <button class="get-now-btn">View</button>
                     </a>
                 </div>
@@ -96,7 +90,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Proposal Planning</h5>
                     <p class="card-text">We are committed to delivering a flawless proposal that exceeds your expectations. We'll work tirelessly to ensure that everything runs smoothly.</p>
-                    <a href="{{ route('service.details', ['type' => 'proposal']) }}">
+                    <a href="{{ route('event.details',$event->id) }}">
                         <button class="get-now-btn">View</button>
                     </a>
                 </div>
@@ -108,7 +102,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Gender Revel Parties</h5>
                     <p class="card-text">We will surprise you with your gender revel party in a grand manner</p>
-                    <a href="{{ route('service.details', ['type' => 'gender-reveal']) }}">
+                    <a href="{{ route('event.details',$event->id) }}">
                         <button class="get-now-btn">View</button>
                     </a>
 
@@ -121,7 +115,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Bride to be parties</h5>
                     <p class="card-text">We will organize your bright to be party to surprise you.</p>
-                    <a href="{{ route('service.details', ['type' => 'bride-to-be']) }}">
+                    <a href="{{ route('event.details',$event->id) }}">
                         <button class="get-now-btn">View</button>
                     </a>
                 </div>
@@ -130,51 +124,6 @@
       </div>
     </div>
 </div>
-    <div class="package">
-        <h1 class="pack">Our Event Packages</h1>
-        <div class="row justify-content-center">
-           
-        <div class="col-md-4">
-        <div class="card">
-          <img src="{{ asset('/Pictures/bd1.webp') }}" class="card-img-top" alt="Half Package">
-          <div class="card-body">
-            <div class="badge-custom">HALF PACKAGE</div>
-            <div class="discount-text">15% Discount</div>
-            <p class="text-muted">Our Half Package is designed for clients who need support at any stage of their special event planning. Whether it's choosing the perfect venue, finalizing the theme, coordinating vendors, or last-minute arrangements, Evenra steps in to make your dream celebration come true effortlessly and elegantly.</p>
-            <div class="booking-text">Booking Now Open</div>
-            <button class="get-now-btn">Get Now</button>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Full Package -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="{{ asset('/Pictures/deco.jpeg') }}" class="card-img-top" alt="Full Package">
-          <div class="card-body text-center">
-            <div class="badge-custom">FULL PACKAGE</div>
-            <div class="discount-text">20% Discount</div>
-            <p class="text-muted">With our Full Package, we take care of your entire event from start to finish. From the very first planning meeting to the final sparkle of your magical day, Evenra ensures every moment is meticulously curated and beautifully executed.</p>
-            <div class="booking-text">Booking Now Open</div>
-            <button class="get-now-btn">Get Now</button>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Day Package -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="{{ asset('/Pictures/bride.jpeg') }}" class="card-img-top" alt="Day Package">
-          <div class="card-body text-center">
-            <div class="badge-custom">DAY PACKAGE</div>
-            <div class="discount-text">10% Discount</div>
-            <p class="text-muted">Our Day Package is perfect for those who have already planned most details but need professional support on the event day. Evenra will manage coordination, timing, and troubleshooting so you can relax and enjoy every moment without worry.</p>
-            <div class="booking-text">Booking Now Open</div>
-            <button class="get-now-btn">Get Now</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <footer class="bg-dark text-white pt-4 pb-2 mt-5">
     <div class="container text-center text-md-start">
         <div class="row">
