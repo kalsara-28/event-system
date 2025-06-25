@@ -1,14 +1,21 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
-    public function showPaymentPage(Request $request)
-    {
-        return view('payment'); // or pass data as needed
-    }
+    // File: app/Http/Controllers/PaymentController.php
+
+// PaymentController.php
+use App\Models\Event;
+use Illuminate\Http\Request;
+
 }
+
+
+
+
+
+
+
 ?>
