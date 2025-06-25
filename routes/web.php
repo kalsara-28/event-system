@@ -6,6 +6,10 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Admin\AdminAuthController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\EventController;
 
 Route::get('/customers/create', [CustomerController::class, 'create'])->name('customers.create');
 Route::post('/customers', [CustomerController::class, 'store'])->name('customers.store');
@@ -46,19 +50,10 @@ Route::post('/contact', function () {
 })->name('contact.send');
 
 
-Route::get('/booking', function () {
-    return view('booking');
-})->name('booking');
-
-Route::post('/booking', function () {
-    // You can save booking data or send email here
-    return back()->with('success', 'Booking submitted successfully!');
-})->name('booking.submit');
+Route::get('/event/{id}', [EventController::class, 'show'])->name('event.details');
 
 
 
-Route::view('/payment', 'payment')->name('payment');
-Route::post('/payment', [App\Http\Controllers\PaymentController::class, 'process'])->name('payment.process');
 
 Route::get('/main', function () {
     return view('main');
@@ -68,16 +63,15 @@ Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
 
-Route::get('/admin', function () {
-    return view('admin.admin');
+
+
+
+
+
+
+Route::prefix('admin')->group(function () {
+    Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
+    Route::get('/dashboard', [AdminAuthController::class, 'dashboard'])->name('admin.dashboard');
+    Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 });
-
-Route::get('/service/{type}', function ($type) {
-    return view('event-detail', ['type' => $type]);
-})->name('service.details');
-
-Route::get('/payment', function () {
-    return view('payment.process');
-})->name('payment.process');
-
-Route::post('/payment', [PaymentController::class, 'showPaymentPage'])->name('payment.process');
