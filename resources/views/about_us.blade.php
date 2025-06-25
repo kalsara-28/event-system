@@ -22,12 +22,6 @@
                     <a class="nav-link active" href="{{ route('about_us') }}">About Us</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('service') }}">Our Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('packages') }}">Packages</a>
-                    </li>
-                <li class="nav-item">
                     <a class="nav-link active" href="{{ route('gallery') }}">Gallery</a>
                 </li>
                 <li class="nav-item">
